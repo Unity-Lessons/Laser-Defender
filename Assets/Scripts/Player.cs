@@ -9,10 +9,11 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
     [SerializeField] float projectileSpeed = 20f;
-    [SerializeField] float projectileFiring = 0.25f;
+    [SerializeField] float projectileFiring = 0.2f;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] GameObject firePoint;
 
+    Coroutine firingCoroutine;
 
     float xMin, xMax, yMin, yMax;
     
@@ -36,7 +37,6 @@ public class Player : MonoBehaviour
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
 
-
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
@@ -51,11 +51,10 @@ public class Player : MonoBehaviour
     private void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
-            StartCoroutine(FireContinuously());
+            firingCoroutine = StartCoroutine(FireContinuously());
 
         if (Input.GetButtonUp("Fire1"))
-            StopAllCoroutines();
-    
+            StopCoroutine(firingCoroutine);
     }
 
     IEnumerator FireContinuously()

@@ -14,7 +14,7 @@ GameObject:
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -97,6 +97,7 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 1
   projectileSpeed: 20
+  projectileFiring: 0.2
   laserPrefab: {fileID: 6034261800723405632, guid: 7861fab349e0da54eadd826ee6d9c869,
     type: 3}
   firePoint: {fileID: 8024588704385068949}
@@ -124,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8024588704385068949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: 0.366, z: 0}
+  m_LocalPosition: {x: -0, y: 0.622, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5292962777136055404}
