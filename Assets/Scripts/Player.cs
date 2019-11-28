@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
 
+
     float xMin, xMax, yMin, yMax;
     
     void Start()
