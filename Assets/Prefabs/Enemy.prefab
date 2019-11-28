@@ -145,5 +145,7 @@ MonoBehaviour:
   laserPrefab: {fileID: 7362520504827920996, guid: 7cef1866a378e6649a757744fca450d9,
     type: 3}
   firePoint: {fileID: 255711179}
-  projectileSpeed: 1.5
-  projectileFiring: 0.65
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.7
+  projectileSpeed: 10
