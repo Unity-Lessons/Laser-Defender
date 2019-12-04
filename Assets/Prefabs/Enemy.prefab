@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b34ee7d7efd4f4b8adb5b111d713a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: 08eec8e988496224a97f382c708db228, type: 2}
-  moveSpeed: 3
+  waveConfig: {fileID: 11400000, guid: a00a861289f45ca41becac1ec65359d2, type: 2}
+  moveSpeed: 2.5
 --- !u!114 &4459222009874411625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   laserPrefab: {fileID: 7362520504827920996, guid: 7cef1866a378e6649a757744fca450d9,
     type: 3}
   firePoint: {fileID: 255711179}
-  shotCounter: 0
+  shotCounter: 0.5
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 0.7
   projectileSpeed: 10
