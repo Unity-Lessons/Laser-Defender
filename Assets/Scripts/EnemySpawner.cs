@@ -11,19 +11,29 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         var currentWave = waveConfigs[startingWave];
-        StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+        StartCoroutine(SpawnAllWaves());
     }
 
-    private IEnumerator SpawnAllEnemiesInWave(WaveConfig myCurrentWave)
+    private IEnumerator SpawnAllWaves()
     {
-        for (int enemyCount = 0; enemyCount < myCurrentWave.GetNumberOfEnemies(); enemyCount++)
+        for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
+        {
+            var currentWave = waveConfigs[waveIndex];
+            yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+        }
+        
+    }
+
+    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
+    {
+        for (int enemyCount = 0; enemyCount < waveConfig.GetNumberOfEnemies(); enemyCount++)
         {
             var newEnemy = Instantiate(
-                myCurrentWave.GetEnemyPrefab(),
-                myCurrentWave.GetWaypoints()[0].transform.position,
+                waveConfig.GetEnemyPrefab(),
+                waveConfig.GetWaypoints()[0].transform.position,
                 Quaternion.identity);
-            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(myCurrentWave);
-            yield return new WaitForSeconds(myCurrentWave.GetTimeBtwnSpawns() * Random.Range(0.1f, myCurrentWave.GetSpawnRandFactor()));
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
+            yield return new WaitForSeconds(waveConfig.GetTimeBtwnSpawns() * Random.Range(.5f, waveConfig.GetSpawnRandFactor()));
         }
     }
 }
