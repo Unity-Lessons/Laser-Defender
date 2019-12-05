@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b34ee7d7efd4f4b8adb5b111d713a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: 6fe53595956ad7a4a89d5f0b4b50a3d4, type: 2}
+  waveConfig: {fileID: 11400000, guid: a00a861289f45ca41becac1ec65359d2, type: 2}
   moveSpeed: 2.5
 --- !u!114 &4459222009874411625
 MonoBehaviour:
@@ -145,4 +145,4 @@ MonoBehaviour:
   shotCounter: 0.5
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 0.7
-  projectileSpeed: 10
+  projectileSpeed: 5

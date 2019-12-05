@@ -16,13 +16,13 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig myCurrentWave)
     {
-        for (int i = 0; i < myCurrentWave.GetNumberOfEnemies(); i++)
+        for (int enemyCount = 0; enemyCount < myCurrentWave.GetNumberOfEnemies(); enemyCount++)
         {
-            Instantiate(
+            var newEnemy = Instantiate(
                 myCurrentWave.GetEnemyPrefab(),
                 myCurrentWave.GetWaypoints()[0].transform.position,
                 Quaternion.identity);
-
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(myCurrentWave);
             yield return new WaitForSeconds(myCurrentWave.GetTimeBtwnSpawns() * Random.Range(0.1f, myCurrentWave.GetSpawnRandFactor()));
         }
     }
