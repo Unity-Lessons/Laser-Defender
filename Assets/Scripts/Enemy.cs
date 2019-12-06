@@ -19,10 +19,20 @@ public class Enemy : MonoBehaviour
         
     }
 
+    public void Damage(float damageDealt)
+    {
+        health -= damageDealt;
+        if (health <= 0)
+            Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
-        if(damageDealer.tag == "DamageDealer")
-            health -= damageDealer.GetDamage();
+        if (damageDealer != null)
+        {
+            Damage(damageDealer.GetDamage());
+            Destroy(other.gameObject);
+        }
     }
 }

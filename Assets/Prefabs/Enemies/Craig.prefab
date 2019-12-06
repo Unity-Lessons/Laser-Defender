@@ -40,10 +40,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8338756877334945612}
   - component: {fileID: 8338756877334945613}
-  - component: {fileID: 6231510942489824203}
   - component: {fileID: 4459222009874411625}
   - component: {fileID: 8165222364671404284}
   - component: {fileID: 3451984419091758979}
+  - component: {fileID: 1369134452325035345}
   m_Layer: 0
   m_Name: Craig
   m_TagString: Untagged
@@ -115,18 +115,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6231510942489824203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8338756877334945618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83b34ee7d7efd4f4b8adb5b111d713a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4459222009874411625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +147,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0021919608, y: 0.052604675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -170,7 +158,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.93, y: 0.84}
+  m_Size: {x: 0.78533685, y: 0.61204576}
   m_EdgeRadius: 0
 --- !u!114 &3451984419091758979
 MonoBehaviour:
@@ -185,3 +173,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+--- !u!114 &1369134452325035345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338756877334945618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b34ee7d7efd4f4b8adb5b111d713a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
