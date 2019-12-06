@@ -131,9 +131,9 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 255711179}
   shotCounter: 0.5
-  minTimeBetweenShots: 0.25
-  maxTimeBetweenShots: 0.75
-  projectileSpeed: 6
+  shotCounterMin: 0.5
+  shotCounterMax: 0.75
+  projectileSpeed: 5
 --- !u!61 &8165222364671404284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2647c13fc7290c341aa95cf0adc17dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 300
 --- !u!114 &1369134452325035345
 MonoBehaviour:
   m_ObjectHideFlags: 0

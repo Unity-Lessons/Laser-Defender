@@ -139,13 +139,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd40f14b1f401b3499a206ba2d5a9323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 7362520504827920996, guid: 7cef1866a378e6649a757744fca450d9,
+  laserPrefab: {fileID: 5073463593342095277, guid: d855d73435336784994ead285285ddd3,
     type: 3}
   firePoint: {fileID: 1608137186218274342}
-  shotCounter: 0.2
-  minTimeBetweenShots: 0.5
-  maxTimeBetweenShots: 1
-  projectileSpeed: 15
+  shotCounter: 0.75
+  shotCounterMin: 0.75
+  shotCounterMax: 0.9
+  projectileSpeed: 12
 --- !u!61 &1986144333167779035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -184,4 +184,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2647c13fc7290c341aa95cf0adc17dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 600
