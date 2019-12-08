@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
     {
         // Play some animation
         alive = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 
@@ -83,10 +83,15 @@ public class Player : MonoBehaviour
 
     private void Fire()
     {
-        if (Input.GetButtonDown("Fire1"))
-            firingCoroutine = StartCoroutine(FireContinuously());
+        if (alive)
+        {
+            if (Input.GetButtonDown("Fire1"))
+                firingCoroutine = StartCoroutine(FireContinuously());
 
-        if (Input.GetButtonUp("Fire1"))
+            if (Input.GetButtonUp("Fire1"))
+                StopCoroutine(firingCoroutine);
+        }
+        else
             StopCoroutine(firingCoroutine);
     }
 
