@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5292962777136055404}
   - component: {fileID: 5292962777136055407}
   - component: {fileID: 5292962777136055405}
-  - component: {fileID: 4435354004866365740}
-  m_Layer: 0
+  - component: {fileID: -6032745965611690897}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,8 +103,8 @@ MonoBehaviour:
   laserPrefab: {fileID: 6034261800723405632, guid: 7861fab349e0da54eadd826ee6d9c869,
     type: 3}
   firePoint: {fileID: 8024588704385068949}
---- !u!61 &4435354004866365740
-BoxCollider2D:
+--- !u!60 &-6032745965611690897
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0045895576, y: -0.0458951}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -126,9 +126,21 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7138077, y: 0.6582098}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.041155934, y: 0.36675882}
+      - {x: -0.04467362, y: 0.36675882}
+      - {x: -0.098931074, y: 0.23722267}
+      - {x: -0.38939708, y: -0.10736179}
+      - {x: -0.48587936, y: -0.2056036}
+      - {x: -0.4858794, y: -0.2861557}
+      - {x: -0.2229887, y: -0.27868366}
+      - {x: -0.13643241, y: -0.37087917}
+      - {x: 0.14231181, y: -0.37500095}
+      - {x: 0.21672839, y: -0.27242184}
+      - {x: 0.47351772, y: -0.2837944}
+      - {x: 0.48175853, y: -0.22856808}
+      - {x: 0.12115592, y: 0.20263863}
 --- !u!1 &8024588704385068949
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8564901601051724324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 255711179}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8165222364671404284}
   - component: {fileID: 3451984419091758979}
   - component: {fileID: 1369134452325035345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Craig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
