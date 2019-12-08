@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1064948865791678855}
   - component: {fileID: -2670367755314239905}
   - component: {fileID: 3883393039088216936}
+  - component: {fileID: -6752551821209449429}
   m_Layer: 0
   m_Name: Enemy Laser
-  m_TagString: DamageDealer
+  m_TagString: Enemy Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +114,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -129,3 +130,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.37}
   m_EdgeRadius: 0
+--- !u!114 &-6752551821209449429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362520504827920996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc279f86b8873b43b9ff332db47c999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50

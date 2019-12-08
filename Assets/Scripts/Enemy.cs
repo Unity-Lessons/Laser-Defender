@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
-        if (damageDealer != null)
+        if (damageDealer != null && other.gameObject.tag == "Player Laser")
         {
             Damage(damageDealer.GetDamage());
             Destroy(other.gameObject);

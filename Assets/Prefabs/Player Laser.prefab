@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6032246285195724752}
   m_Layer: 0
   m_Name: Player Laser
-  m_TagString: DamageDealer
+  m_TagString: Player Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
