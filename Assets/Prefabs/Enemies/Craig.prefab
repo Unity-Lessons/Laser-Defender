@@ -133,7 +133,7 @@ MonoBehaviour:
   shotCounter: 0.5
   shotCounterMin: 0.5
   shotCounterMax: 0.75
-  projectileSpeed: 5
+  projectileSpeed: 4
 --- !u!61 &8165222364671404284
 BoxCollider2D:
   m_ObjectHideFlags: 0
