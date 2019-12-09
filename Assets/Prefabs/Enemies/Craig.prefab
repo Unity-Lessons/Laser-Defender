@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &255711178
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255711179}
-  m_Layer: 9
-  m_Name: Firepoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &255711179
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255711178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -0.361, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8338756877334945612}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8338756877334945618
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8338756877334945612}
   - component: {fileID: 8338756877334945613}
-  - component: {fileID: 4459222009874411625}
   - component: {fileID: 8165222364671404284}
   - component: {fileID: 3451984419091758979}
   - component: {fileID: 1369134452325035345}
@@ -61,8 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.44, y: 5.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 255711179}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -115,25 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4459222009874411625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8338756877334945618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd40f14b1f401b3499a206ba2d5a9323, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 7362520504827920996, guid: 7cef1866a378e6649a757744fca450d9,
-    type: 3}
-  firePoint: {fileID: 255711179}
-  shotCounter: 0.5
-  shotCounterMin: 0.5
-  shotCounterMax: 0.75
-  projectileSpeed: 4
 --- !u!61 &8165222364671404284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,7 +121,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2647c13fc7290c341aa95cf0adc17dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 7362520504827920996, guid: 7cef1866a378e6649a757744fca450d9,
+    type: 3}
+  shotCounterMin: 0.75
+  shotCounterMax: 1.25
+  projectileSpeed: 6
+  deathVFX: {fileID: 3940485497964354337, guid: ff3134b86663a5440a730b41f1085164,
+    type: 3}
   health: 300
+  durationOfDeath: 1
 --- !u!114 &1369134452325035345
 MonoBehaviour:
   m_ObjectHideFlags: 0
