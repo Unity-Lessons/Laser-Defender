@@ -142,3 +142,7 @@ MonoBehaviour:
     type: 3}
   health: 600
   durationOfDeath: 1
+  deathSFX: {fileID: 8300000, guid: 6a7c93d1f321bc342aac683437be527e, type: 3}
+  deathSoundVolume: 0.7
+  shootSFX: {fileID: 8300000, guid: ed615e1b673aede4cad2e03ef60fb170, type: 3}
+  shootSoundVolume: 0.1

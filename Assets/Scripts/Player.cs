@@ -6,16 +6,22 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // configuration parameters
-    [Header("Player Movement")]
+    [Header("Player Stats")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
     [SerializeField] int health = 200;
+    [SerializeField] float durationOfDeath = 0.5f;
+    [SerializeField] GameObject deathVFX;
 
     [Header("Projectile")]
     [SerializeField] float projectileSpeed = 20f;
-    [SerializeField] float projectileFiring = 0.2f;
+    [SerializeField] float projectileFiringSpeed = 0.2f;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] GameObject firePoint;
+
+    [Header("SFX")]
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.7f;
 
     Coroutine firingCoroutine;
 
@@ -43,19 +49,21 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator Death()
+    private void Death()
     {
         // Play some animation
         alive = false;
-        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSoundVolume);
+        GameObject enemyExplosion = Instantiate(deathVFX, transform.position, transform.rotation);
+        Destroy(enemyExplosion, durationOfDeath);
     }
 
     public void Damage(int damageDealt)
     {
         health -= damageDealt;
         if (health <= 0)
-            StartCoroutine(Death());
+            Death();
     }
 
     private void setUpMoveBoundaries()
@@ -104,7 +112,7 @@ public class Player : MonoBehaviour
                     firePoint.transform.position,
                     Quaternion.identity) as GameObject;
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
-            yield return new WaitForSeconds(projectileFiring);
+            yield return new WaitForSeconds(projectileFiringSpeed);
         }
     }
 }

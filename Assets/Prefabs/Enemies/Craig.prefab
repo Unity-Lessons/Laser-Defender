@@ -129,7 +129,11 @@ MonoBehaviour:
   deathVFX: {fileID: 3940485497964354337, guid: ff3134b86663a5440a730b41f1085164,
     type: 3}
   health: 300
-  durationOfDeath: 1
+  durationOfDeath: 0.5
+  deathSFX: {fileID: 8300000, guid: 6a7c93d1f321bc342aac683437be527e, type: 3}
+  deathSoundVolume: 0.7
+  shootSFX: {fileID: 8300000, guid: 77490865d2e4c98449bfe6e93c45f533, type: 3}
+  shootSoundVolume: 0.1
 --- !u!114 &1369134452325035345
 MonoBehaviour:
   m_ObjectHideFlags: 0
