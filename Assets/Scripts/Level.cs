@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
+
+    [SerializeField] float gameOverTransition = 2f;
+
     public void LoadStartMenu()
     {
         SceneManager.LoadScene(0);
@@ -17,6 +20,12 @@ public class Level : MonoBehaviour
 
     public void LoadGameOver()
     {
+        StartCoroutine(WaitAndLoad());
+    }
+
+    IEnumerator WaitAndLoad()
+    {
+        yield return new WaitForSeconds(gameOverTransition);
         SceneManager.LoadScene("Game Over");
     }
 
