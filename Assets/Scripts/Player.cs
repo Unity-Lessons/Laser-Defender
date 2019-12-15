@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
 
     [Header("SFX")]
     [SerializeField] AudioClip deathSFX;
-    [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.7f;
+    [SerializeField] AudioClip hurtSFX;
+    [SerializeField] [Range(0, 1)] float hurtVolume = 0.7f;
 
     Coroutine firingCoroutine;
 
@@ -54,7 +55,7 @@ public class Player : MonoBehaviour
         // Play some animation
         alive = false;
         Destroy(gameObject);
-        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSoundVolume);
+        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, hurtVolume);
         GameObject enemyExplosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(enemyExplosion, durationOfDeath);
         FindObjectOfType<Level>().LoadGameOver();
@@ -63,7 +64,9 @@ public class Player : MonoBehaviour
     public void Damage(int damageDealt)
     {
         health -= damageDealt;
-        if (health <= 0)
+        if (health > 0)
+            AudioSource.PlayClipAtPoint(hurtSFX, Camera.main.transform.position, hurtVolume);
+        else 
             Death();
     }
 
