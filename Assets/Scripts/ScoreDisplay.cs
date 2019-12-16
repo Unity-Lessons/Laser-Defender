@@ -12,12 +12,12 @@ public class ScoreDisplay : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<Text>();
-        gameSession = GetComponent<GameSession>();
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.Text = gameSession.GetScore().ToString();
+        scoreText.text = gameSession.GetScore().ToString();
     }
 }

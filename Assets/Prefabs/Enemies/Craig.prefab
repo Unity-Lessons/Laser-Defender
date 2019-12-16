@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2647c13fc7290c341aa95cf0adc17dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSession: {fileID: 7795327948043487341, guid: a79fd49cd66cc0a4dad5ddb6492b7309,
+    type: 3}
   laserPrefab: {fileID: 7362520504827920996, guid: 7cef1866a378e6649a757744fca450d9,
     type: 3}
   shotCounterMin: 0.4
@@ -132,6 +134,7 @@ MonoBehaviour:
     type: 3}
   health: 200
   durationOfDeath: 0.5
+  scoreValue: 150
   deathSFX: {fileID: 8300000, guid: 6a7c93d1f321bc342aac683437be527e, type: 3}
   deathSoundVolume: 0.7
   shootSFX: {fileID: 8300000, guid: 77490865d2e4c98449bfe6e93c45f533, type: 3}
