@@ -64,7 +64,6 @@ public class Player : MonoBehaviour
     public void Damage(int damageDealt)
     {
         health -= damageDealt;
-        FindObjectOfType<GameSession>().DamageHealth(damageDealt);
         if (health > 0)
             AudioSource.PlayClipAtPoint(hurtSFX, Camera.main.transform.position, hurtVolume);
         else 

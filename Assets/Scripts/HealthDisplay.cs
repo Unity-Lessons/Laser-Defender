@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class HealthDisplay : MonoBehaviour
 {
     Text healthText;
-    GameSession gameSession;
+    Player player;
 
     // Start is called before the first frame update
     void Start()
     {
         healthText = GetComponent<Text>();
-        gameSession = FindObjectOfType<GameSession>();
+        player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthText.text = gameSession.GetHealth().ToString();
+        healthText.text = player.PlayerHealth().ToString();
     }
 }
