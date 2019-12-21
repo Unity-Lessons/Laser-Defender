@@ -64,6 +64,7 @@ public class Player : MonoBehaviour
     public void Damage(int damageDealt)
     {
         health -= damageDealt;
+        FindObjectOfType<GameSession>().DamageHealth(damageDealt);
         if (health > 0)
             AudioSource.PlayClipAtPoint(hurtSFX, Camera.main.transform.position, hurtVolume);
         else 
@@ -91,6 +92,11 @@ public class Player : MonoBehaviour
 
             transform.position = new Vector2(newXPos, newYPos);
         }
+    }
+
+    public int PlayerHealth()
+    {
+        return health; 
     }
 
     private void Fire()
