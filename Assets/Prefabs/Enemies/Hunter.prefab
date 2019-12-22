@@ -127,7 +127,7 @@ MonoBehaviour:
     type: 3}
   shotCounterMin: 1
   shotCounterMax: 1.25
-  projectileSpeed: 10.5
+  projectileSpeed: 7
   deathVFX: {fileID: 3940485497964354337, guid: ff3134b86663a5440a730b41f1085164,
     type: 3}
   health: 500

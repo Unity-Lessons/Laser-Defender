@@ -125,9 +125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 7362520504827920996, guid: 7cef1866a378e6649a757744fca450d9,
     type: 3}
-  shotCounterMin: 0.4
+  shotCounterMin: 0.6
   shotCounterMax: 0.75
-  projectileSpeed: 6
+  projectileSpeed: 5
   deathVFX: {fileID: 3940485497964354337, guid: ff3134b86663a5440a730b41f1085164,
     type: 3}
   health: 200

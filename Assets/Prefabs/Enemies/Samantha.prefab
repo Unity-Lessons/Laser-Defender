@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1275804299851178792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.24, y: 4.72, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -148,12 +148,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 7460061483422148030, guid: 4a03f10d1c5d47142adca6dfa936a1a8,
     type: 3}
-  shotCounterMin: 0.5
-  shotCounterMax: 0.7
+  shotCounterMin: 1.3
+  shotCounterMax: 1.6
   projectileSpeed: 4
   deathVFX: {fileID: 3940485497964354337, guid: ff3134b86663a5440a730b41f1085164,
     type: 3}
-  health: 2000
+  health: 3000
   durationOfDeath: 1.5
   scoreValue: 500
   deathSFX: {fileID: 8300000, guid: 2b0aa2ce403eb474fa797a29e63acfcd, type: 3}
