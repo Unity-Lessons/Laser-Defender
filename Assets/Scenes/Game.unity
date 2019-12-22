@@ -875,6 +875,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 678978461971638649, guid: f444b7754266e7441bab38b449900083,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6fe53595956ad7a4a89d5f0b4b50a3d4,
+        type: 2}
+    - target: {fileID: 678978461971638649, guid: f444b7754266e7441bab38b449900083,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ac16162e5292064eb0d84dfba13bfd2,
+        type: 2}
+    - target: {fileID: 678978461971638649, guid: f444b7754266e7441bab38b449900083,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 25b5fbf921762404fb9c86f87ece7731,
+        type: 2}
+    - target: {fileID: 678978461971638649, guid: f444b7754266e7441bab38b449900083,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: a00a861289f45ca41becac1ec65359d2,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f444b7754266e7441bab38b449900083, type: 3}
 --- !u!1001 &3214563840620254892
